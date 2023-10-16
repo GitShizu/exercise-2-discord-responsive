@@ -29,7 +29,7 @@ img{
 }
 
 .button {
-    padding: 0.8em 2em;
+    padding: 0.8em 1.5em;
     border-radius: 2em / 2em;
     border: none;
 }
@@ -46,13 +46,6 @@ img{
 
 .hover2:hover {
     filter: brightness(1.25);
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 1.5rem;
 }
 
 a {
@@ -104,6 +97,13 @@ header {
     padding: 0 17.5%;
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1.5rem;
+}
+
 #nav-center {
     width: 50%;
     display: flex;
@@ -112,11 +112,18 @@ header {
 }
 
 #jumbo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    margin: 6.5rem 0;
-    padding: 0 22.5%;
+    gap: 2rem;
+}
+
+#jumbo>h1, #jumbo>p {
     text-align: center;
+    padding: 0 22.5%;
+    line-height: 1.5rem;
 }
 
 #jumbo>h1{
@@ -124,12 +131,17 @@ header {
     margin-bottom: 1.5rem;
 }
 
-#jumbo>button {
-    font-size: 1rem;
-    margin: 2.5rem 0.5rem;
+#jumbo-buttons {
+    display: flex;
+    justify-content: center;
 }
 
-#jumbo button:last-child {
+#jumbo-buttons>button {
+    font-size: 1rem;
+    margin: 0.5rem 0.5rem;
+}
+
+#jumbo-buttons button:last-child {
     background-color: var(--dark-gray);
     color: var(--light-gray);
 }
@@ -245,3 +257,77 @@ ul {
     background-color: var(--purple);
     color: var(--light-gray);
 }
+
+
+/* -----------------breakpoints------------------- */
+@media screen and (max-width: 980px) {
+        
+        #hero-left {
+            display: none;
+        }
+
+        #jumbo>h1, #jumbo>p, #overlay {
+            padding: 0;
+            text-align: left;
+        }
+
+        #overlay>nav, #jumbo {
+            padding: 2rem 2rem 0;
+        }
+
+        #jumbo {
+            align-self: flex-start;
+            max-width: 60%;
+            margin: 0;
+        }
+
+       
+        
+        #jumbo-buttons {
+            flex-direction: column;
+            width: fit-content;
+        }
+
+        #nav-center {
+            display: none;
+        }
+}
+
+@media only screen and (max-width: 480px) {
+    #hero-left {
+        display: unset;
+        padding: 0 8vw;
+    }
+
+    #hero-right {
+        display: none;
+    }
+
+    #jumbo {
+        max-width: 100%;
+        justify-content: start;
+        margin: 0;
+        gap: 1rem;
+    }
+
+    #jumbo>h1, #jumbo>p {
+        text-align:start;
+    }
+
+    #jumbo>h1{
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        margin: 3rem 0 1rem;
+    }
+
+    #jumbo>p {
+        font-size: 0.8rem;
+    }
+
+    header {
+        background-image: none;
+        height: 90vh;
+    }
+}
+   
+
