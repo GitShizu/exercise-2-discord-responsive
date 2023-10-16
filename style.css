@@ -62,7 +62,7 @@ button, select {
     outline: none;
 }
 
-p {
+p, li>a {
     line-height: 1.5rem;
 }
 /* ------------------header------------------ */
@@ -219,6 +219,9 @@ h4 {
 /* -----------------footer------------------- */
 
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--dark-gray);
         color: var(--light-gray);
     padding: 3.5rem 15%;
@@ -226,11 +229,13 @@ footer {
     }
     
 #footer-top {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     border-bottom: solid 1px var(--purple);
     padding-bottom: 2rem;
-    
+    gap: 3rem;
+    flex-wrap: wrap;    
 }
     
 #footer-top>div>h5 {
@@ -256,8 +261,20 @@ option {
 ul {
     list-style: none;
 }
+
+.footer-column {
+    flex-wrap: nowrap;
+}
+
+li>a {
+    font-size: 0.8rem;
+}
+
+#footer-bot {
+    width: 100%;
+}
                 
-#footer-bot>nav>button {
+#footer-bot>nav>div>button {
     background-color: var(--purple);
     color: var(--light-gray);
 }
@@ -306,6 +323,11 @@ ul {
             font-size: 1rem;
             width: 100%;
         }
+
+        footer {
+            padding: 3.5rem 5%;
+        }
+
 
 }
 
