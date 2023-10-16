@@ -62,6 +62,9 @@ button, select {
     outline: none;
 }
 
+p {
+    line-height: 1.5rem;
+}
 /* ------------------header------------------ */
 
 header { 
@@ -123,7 +126,7 @@ nav {
 #jumbo>h1, #jumbo>p {
     text-align: center;
     padding: 0 22.5%;
-    line-height: 1.5rem;
+    
 }
 
 #jumbo>h1{
@@ -173,6 +176,7 @@ nav {
 h2 {
     font-size: 2.5rem;
     font-weight: 800;
+    margin-bottom: 2rem;
 }
 
 h4 {
@@ -281,7 +285,9 @@ ul {
             margin: 0;
         }
 
-       
+        #last-row div:nth-child(3) {
+            width: 60%;
+        }
         
         #jumbo-buttons {
             flex-direction: column;
@@ -291,6 +297,16 @@ ul {
         #nav-center {
             display: none;
         }
+
+        .info-row {
+            padding: 5rem 5%;
+        }
+
+        .info {
+            font-size: 1rem;
+            width: 100%;
+        }
+
 }
 
 @media only screen and (max-width: 480px) {
@@ -320,13 +336,44 @@ ul {
         margin: 3rem 0 1rem;
     }
 
-    #jumbo>p {
-        font-size: 0.8rem;
-    }
-
     header {
         background-image: none;
         height: 90vh;
+    }
+
+    .info-row, .info-row:nth-child(even) {
+        flex-direction: column;
+        padding: 5rem 5%;
+    }
+
+    .info {
+        font-size: 0.75rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #last-row {
+        padding: 5rem 5%;
+    }
+
+    #last-row div:first-child {
+        width: 100%;
+        font-size: 0.75rem;
+        text-align: left;
+    }
+
+    #last-row div:nth-child(3) {
+        width: 100%;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+    }
+
+    #download-button {
+        width: 100%;
     }
 }
    
